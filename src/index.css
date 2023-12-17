@@ -1,0 +1,184 @@
+/*Font family Ubuntu*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@400;700&display=swap');
+/* A CSS reset*/
+*,*::before,*::after {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+img,picture,svg {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration:underline;
+  transition: all 1.5s;
+}
+/*Utility styles*/
+.flex {
+  display: flex;
+  align-items:center;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.grid {
+  display:grid;
+}
+.center {
+  justify-content: center;
+}
+.space-evenly{
+  justify-content: space-evenly;
+}
+.space-between {
+  justify-content:space-between;
+}
+.w-100 {
+  width:100%;
+}
+.w-50 {
+  width:50%;
+}
+.p-05 {
+  padding: 0.5rem;
+}
+
+/* Custom styles */
+
+.btn-container {
+  margin: 0.5rem 1rem;
+}
+.btn {
+  background-color: var(--clr-columbia-blue);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  border:none;
+}
+.btn-container button {
+  background:none;
+  border:none;
+}
+.green {
+  background-color: var(--clr-green);
+  color:whitesmoke;
+}
+.red {
+  background-color: var(--clr-red);
+  color:whitesmoke;
+}
+.container {
+  width:80%;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  background-color: var(--clr-white);
+  padding: 1rem;
+}
+.symbol-container {
+  display:grid;
+  margin:1rem;
+  place-content:center;
+}
+.symbol-container p {
+  text-align: center;
+}
+.nav-container {
+  width: 100%;
+}
+.nav-container li {
+  display: flex;
+  justify-content: center;
+}
+
+.rightMenu {
+  width:35%;
+  height: 100vh;
+  transform:translateX(-100%);
+  transition: all 500ms;
+  position:fixed;
+  z-index: 1000;
+  background-image: linear-gradient(to right,var(--clr-columbia-blue),var(--clr-light-blue));
+}
+.leftMenu {
+  width: 35%;
+  height:100vh;
+  position: fixed;
+  right:0;
+  z-index:1000;
+  background-image: linear-gradient(to left,var(--clr-columbia-blue),var(--clr-light-blue));
+  display: grid;
+  transform: translateX(100%);
+  transition: all 500ms;
+}
+.MenuSlide {
+  transform: translateX(0);
+}
+/* Semantic Styles */
+header {
+  background-image: linear-gradient(to right,var(--clr-light-blue) 30%,var(--clr-columbia-blue));
+  box-shadow: 0px 2px 4px var(--clr-columbia-blue);
+  height:7vh;
+}
+
+button:hover {
+  cursor: pointer;
+}
+form input {
+  border-radius: 1rem;
+  border:none;
+  height: 1rem;
+  padding: 1rem 0.5rem;
+  font-family: var(--ff);
+}
+table {
+  border-collapse: collapse;
+  display:block;
+  width:100%;
+  margin-inline:auto;
+}
+th {
+  border: 1px solid var(--clr-columbia-blue);
+  padding: 0.5rem 1rem;
+}
+tr,td {
+  border: 1px solid var(--clr-columbia-blue);
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+article h1 {
+  text-decoration: underline;
+}
+ul {
+  width: 100%;
+  list-style-type: none;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem auto;
+  width:100%;
+}
+
+/*Variables */
+:root {
+  --clr-black: hsl(120, 100%, 0%);
+  --clr-white: hsl(0, 0%, 95%);
+  --clr-grey: hsl(224, 11%, 67%);
+  --clr-light-blue: hsl(188, 35%, 69%);
+  --clr-columbia-blue: hsl(205, 52%, 81%);
+  --clr-red:hsl(350, 70%, 60%);
+  --clr-green: hsl(180, 90%, 25%);
+  --clr-alert: hsl(47, 92%, 70%);
+  --ff:'Ubuntu',sans-serif;
+}
